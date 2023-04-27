@@ -1,74 +1,106 @@
 // Задание 1
-let country = "Sweden";
-let access = country == "Sweden" ? "true" : "false";
-console.log(access);
+let country = 'Sweden';
+let access  = country == 'Sweden' ? "true" : "false";
+alert(access);
 
-//  задание 2;
-let a = 10;
-a++;
-console.log(a);
+// Задание 2
+let num=10;
+for (let i=0; i<10; i++){
+    num++;
+    console.log (num);
+ }
+ if (num=11){
+    console.log(num)
+ }
 
-let b = 10;
-for (let b = 10; b < 20; b++) {
-  console.log(b);
+// вариант 2
+let num = 10;
+for (let i = 10; i < 20; i++) {
+  num++;
+  console.log(num);
+  if (num == 11) {
+    console.log(num);
+  }
 }
-// Задание 3 1 ч
 
-for (let c = 0; c < 5; c + 2) {
-  alert("Введите число");
-}
-// Задание 3 2 ч
+// Задание 3
 
-let numb = +prompt("Введите число");
-let result;
-//  for (let numb=0; numb=10; numb+2){
-//   result = ('Равно 10')
-// }
-for (let numb = 0; numb > 10; numb + 2) {
-  result = "Не равно 10";
+for (let i=0; i<10; i +=2){
+ let num = prompt ('Enter a number');
+  if (num=10){
+    console.log('Равно 10');
+  }
+  else {
+    console.log('Не равно 10');
+  }
+
 }
-for (let numb = 0; numb < 10; numb + 2) {
-  result = "Не равно 10";
-}
-console.log("result");
 
 // Задание 4
-let num = +prompt("Введите число");
-let result;
-for (let num = 0; num < 100; num++) {
-  result = "num**";
+const num = prompt ('Введите число от 0 до 100');
+for (let i=0; i<100; i++){
+let numResult = i**2;
+if (i<num){
+    console.log(numResult);
+}
 }
 
 // Задание 5
-let userNumber;
-userNumber = prompt("введите число");
-for (let userNumber = 0; userNumber < 100; userNumber * 3);
-{
-  alert(Fizz);
-}
-for (let userNumber = 0; userNumber < 100; userNumber * 5);
-{
-  alert(FizzBuzz);
+
+for (let i=1; i<100; i++){
+  if( i %3 == 0 && i %5==0){
+    console.log('BuzzFizz')
+  }
+  else if (i %3==0){
+    console.log('Fizz');
+  }
+  else if (i %5==0){
+    console.log('Buzz');
+  }
 }
 
 // Задание 6
-let i = 0;
+
+for (let i = 0; i < 3; i++) {
+    alert( `number ${i}!` );
+    }
+
+    let i = 0;
 while (i < 3) {
   alert(`number ${i}!`);
   i++;
 }
+
 // Задание 7
 function ExponNumbers(min, max) {
-  let result = 0;
+  let square = 1;
   for (let i = min; i <= max; i++) {
-    result += i;
+    square = i ** 2;
   }
-  return result;
+  return square;
 }
-console.log(ExponNumbers(1, 100));
+console.log(ExponNumbers(1, 10));
 
-//Задание 8
+// Задание 8
 function getRandomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function getRandomRGB(){
+        let numFirst = getRandomInteger (0, 255);
+        let numSecond = getRandomInteger (0, 255);
+        let numThird = getRandomInteger (0, 255);
+        return 'rgb('+ numFirst + ','+ numSecond+','+'numThird'+ ')';
+
+    }
+
+// Задание  9
+
+function fullNumbers(n) {
+  for (let i = 1; i < n; i = i + 0.5) {
+    if (i % 1 == 0) {
+      console.log("integer");
+    } else {
+      console.log("decimal");
+    }
+  }
 }
-console.log(getRandomInteger(0,255));
