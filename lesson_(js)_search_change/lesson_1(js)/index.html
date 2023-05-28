@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 50px;
+        border: 2px solid;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        transition: 0.8s;
+        width: 70%;
+        margin: 0 auto 30px auto;
+      }
+
+      .none {
+        display: none !important;
+      }
+
+      .wrapper_modal {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.591);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: brown;
+      }
+
+      form {
+        max-width: 360px;
+        width: 100%;
+        min-height: 50vh;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .wrapper_modal input {
+        margin-bottom: 20px;
+      }
+
+      .wr_button {
+        display: flex;
+        justify-content: center;
+      }
+
+      .wr_button button {
+        width: 150px;
+        height: 50px;
+      }
+
+      .wr_btn_close {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .wr_form {
+        margin-bottom: 15px;
+      }
+      .btn_add {
+        background-color: rgb(147, 142, 133);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 40px;
+      }
+      #btnSearch {
+        background-color: rgb(147, 142, 133);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 40px;
+      }
+      #searchInput{
+        margin-left: 10px;
+        background-color: #c7b7b7;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      #userName {
+        margin-left: 10px;
+        background-color: #c7b7b7;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      #lastName {
+        margin-left: 10px;
+        background-color: #c7b7b7;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: large;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .btnDel {
+        background-color: rgb(189, 117, 117);
+        font-size: large;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .btnEdit {
+        background-color: rgb(189, 117, 117);
+        font-size: large;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .btn_cl {
+        background-color: rgb(155, 69, 69);
+        font-size: large;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      h5 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: brown;
+      }
+
+      #editFirstUserName {
+        padding: 10px;
+        font-size: large;
+      }
+      #editUserName {
+        padding: 10px;
+        font-size: large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper_modal none">
+      <form action="">
+        <div class="wr_btn_close">
+          <button class="btn_cl" type="button">Close</button>
+        </div>
+        <h1>Enter user name</h1>
+        <div>
+          <h5>User name</h5>
+          <input type="text" id="editUserName" />
+        </div>
+        <div>
+          <h5>Last user name</h5>
+          <input type="text" id="editFirstUserName" />
+        </div>
+        <div class="wr_button">
+          <button type="button" class="btn_sendForm">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="wr_form">
+      <h1>Create user</h1>
+      <input type="text" placeholder="userName" id="userName" />
+      <input type="text" placeholder="lastName" id="lastName" />
+      <button class="btn_add">Send</button>
+    </div>
+    <input type="search" id="searchInput" />
+    <button id="btnSearch">Search</button>
+    <ul class="container"></ul>
+    <script src="./script.js"></script>
+  </body>
+</html>
